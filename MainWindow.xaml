@@ -23,6 +23,10 @@
                 Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" 
                 Click="per_Click" BorderBrush="White" 
                 Background="Azure"/>
-        <Button x:Name="per2" Content="Переходик ко второй таблице" Grid.Column="2" Grid.ColumnSpan="2" Click="per2_Click" Grid.Row="0" BorderBrush="White" Background="Azure"/>
+        <Button x:Name="per2" Content="Переходик ко второй таблице" 
+                Grid.Column="2" Grid.ColumnSpan="2" Click="per2_Click" 
+                Grid.Row="0" BorderBrush="White" 
+                Background="Azure"/>
+
     </Grid>
 </Window>

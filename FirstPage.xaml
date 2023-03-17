@@ -9,7 +9,22 @@
       Title="FirstPage">
 
     <Grid>
-        
-        <DataGrid x:Name="post" Background="White" BorderBrush="White"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+            <Frame x:Name="page1"/>
+        <DataGrid x:Name="post" Background="White" BorderBrush="White" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="nad"   Text="Введите название должности" Grid.Row="1" Grid.Column="0" Background="White" TextWrapping="Wrap" TextAlignment="Center"/>
+        <TextBlock x:Name="nad1" TextAlignment="Center" Text="Введите зарплату" Grid.Row="1" Grid.Column="1" Background="White"/>
+        <TextBox x:Name="Name" Grid.Row="2" Grid.Column="0"  Background="Azure"/>
+        <TextBox x:Name="Sol" Grid.Row="2" Grid.Column="1" Background="Azure"/>
+        <Button x:Name="dobInf" Background="Red" Grid.Row="3" Grid.ColumnSpan="2" Click="dobInf_Click" Content="Добавить данные"/>
     </Grid>
 </Page>
