@@ -1,5 +1,6 @@
 ﻿using Pract1.newDataSetTableAdapters;
 using System;
+using System.Data;
 using System.Windows.Controls;
 
 namespace Pract1
@@ -23,6 +24,13 @@ namespace Pract1
             Sol.Text = "";
             post.ItemsSource = post1.GetData();
 
+        }
+
+        private void remInf_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            int id = (int)(post.SelectedItem as DataRowView).Row[0];
+            post1.Delete1(id);
+            post.ItemsSource = post1.GetData();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Windows.Controls;
+﻿using System.Data;
+using System.Windows.Controls;
 using Pract1.newDataSetTableAdapters;
 
 namespace Pract1
@@ -24,6 +25,14 @@ namespace Pract1
             
             staff.ItemsSource = staff1.GetData();
 
+        }
+
+        private void remInf_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            int id = (int)(staff.SelectedItem as DataRowView).Row[0];
+            staff1.Delete2(id);
+
+            staff.ItemsSource = staff1.GetData();
         }
     }
 }
