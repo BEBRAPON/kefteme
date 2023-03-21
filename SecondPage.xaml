@@ -23,15 +23,17 @@
             <RowDefinition Height="0.5*"/>
             <RowDefinition Height="0.5*"/>
             <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
         </Grid.RowDefinitions>
         <TextBlock Text="Введите имя" TextAlignment="Center" Grid.Row="1" Grid.Column="0"/>
         <TextBlock Text="Введите фамилию" TextAlignment="Center" Grid.Row="3" Grid.Column="0"/>
         <TextBlock Text="Выберите должность" TextAlignment="Center" Grid.Row="5" Grid.Column="0"/>
-        <DataGrid x:Name="staff" Background="White" BorderBrush="White" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
+        <DataGrid x:Name="staff" Background="White" BorderBrush="White" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" CanUserAddRows="False" SelectionChanged="staff_SelectionChanged"/>
         <TextBox x:Name="Name" TextAlignment="Center" Background="Azure" Grid.Row="2" Grid.Column="0"/>
         <TextBox x:Name="Surname"  Background="Azure" TextAlignment="Center" Grid.Row="4" Grid.Column="0"/>
-        <ComboBox x:Name="FK"  Background="Azure" Grid.Column="0" Grid.Row="6"/>
+        <ComboBox x:Name="FK"  Background="Azure" Grid.Column="0" Grid.Row="6" />
         <Button x:Name="dobInf" Content="Добавить данные" Background="Red" Grid.Row="7" Grid.Column="0" Click="dobInf_Click"/>
         <Button x:Name="remInf" Content="Удалить данные" Background="Red" Grid.Row="7" Grid.Column="1" Click="remInf_Click"/>
+        <Button x:Name="updateInf" Content="Изменить данные" Background="Red" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2" Click="updateInf_Click" />
     </Grid>
 </Page>

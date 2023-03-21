@@ -34,5 +34,29 @@ namespace Pract1
 
             staff.ItemsSource = staff1.GetData();
         }
+
+       
+
+        private void updateInf_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            if (staff.SelectedItem != null)
+            {
+                var item = staff.SelectedItem as DataRowView;
+                staff1.UpdateQuery(Name.Text, Surname.Text, (int)FK.SelectedValue, (int)item.Row[0]);
+
+                staff.ItemsSource = staff1.GetData();
+            }
+        }
+
+        private void staff_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (staff.SelectedItem != null)
+            {
+                var item = staff.SelectedItem as DataRowView;
+                Name.Text = (string)item.Row[1];
+                Surname.Text = (string)item.Row[2];
+                FK.SelectedValue = (int)item.Row[3];
+            }
+        }
     }
 }

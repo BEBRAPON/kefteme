@@ -58,6 +58,9 @@
     <Compile Include="FirstPage.xaml.cs">
       <DependentUpon>FirstPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="newDataSet.cs">
+      <DependentUpon>newDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="newDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -7,6 +7,7 @@
       mc:Ignorable="d" 
       Background="White"
       d:DesignHeight="450" d:DesignWidth="800"
+      
       Title="FirstPage">
 
     <Grid>
@@ -21,15 +22,20 @@
             <RowDefinition Height="0.5*"/>
             <RowDefinition Height="0.5*"/>
             <RowDefinition Height="0.5*"/>
-
+            <RowDefinition Height="0.5*"/>
         </Grid.RowDefinitions>
             <Frame x:Name="page1"/>
-        <DataGrid x:Name="post" Background="White" BorderBrush="White" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
+        <DataGrid x:Name="post" Background="White" BorderBrush="White" HorizontalAlignment="Center" VerticalAlignment="Center" CanUserAddRows="False" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" SelectionChanged="post_SelectionChanged">
+            
+        </DataGrid>
         <TextBlock x:Name="nad"   Text="Введите название должности" Grid.Row="1" Grid.Column="0" Background="White" TextWrapping="Wrap" TextAlignment="Center"/>
         <TextBlock x:Name="nad1" TextAlignment="Center" Text="Введите зарплату" Grid.Row="3" Grid.Column="0" Background="White"/>
         <TextBox x:Name="Name" Grid.Row="2" Grid.Column="0"  Background="Azure"/>
         <TextBox x:Name="Sol" Grid.Row="4" Grid.Column="0" Background="Azure"/>
         <Button x:Name="dobInf" Background="Red" Grid.Row="5"  Click="dobInf_Click" Content="Добавить данные"/>
         <Button x:Name="remInf" Background="Red" Grid.Row="5"  Grid.Column="1" Content="Удалить данные" Click="remInf_Click"/>
+        <Button x:Name="updateInf" Background="Red" Grid.Row="6"  
+                Grid.Column="0" Grid.ColumnSpan="2" Content="Изменить данные" 
+                Click="updateInf_Click"/>
     </Grid>
 </Page>
